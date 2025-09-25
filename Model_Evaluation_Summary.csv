@@ -1,0 +1,5 @@
+Model Type,Model,Metric Evaluated,Key Result,Interpretation,Final Decision
+Classification,Random Forest,"Accuracy, F1-score, AUC","Accuracy: 75%, F1-score (class 1): 0.86, AUC: 0.55",Lower accuracy and AUC; weaker performance in classifying congestion,Discarded
+Classification,Logistic Regression,"Accuracy, F1-score, AUC","Accuracy: 79%, F1-score (class 1): 0.88, AUC: 0.69",Better accuracy and F1; AUC = 0.69 indicates good model separation,Retained
+Regression,Random Forest,"MAE, RMSE, R2","MAE: 1.67, RMSE: 2.01, R2: 0.14",Lower error and higher R2; suitable for regression on wait times,Retained
+Regression,XGBoost,"MAE, RMSE, R2","MAE: 1.79, RMSE: 2.18, R2: -0.01",Higher error and negative R2; unsuitable for delay prediction,Discarded
